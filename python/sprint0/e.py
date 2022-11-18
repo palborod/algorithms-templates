@@ -1,7 +1,17 @@
 from typing import List, Tuple, Optional
 
 def two_sum(arr: List[int], target_sum: int) -> Optional[Tuple[int, int]]:
-    # Здесь реализация вашего решения
+    first = 0
+    last = len(arr) - 1
+    while first < last:
+        summ = arr[first] + arr[last]
+        if summ == target_sum:
+            return arr[first], arr[last]
+        if summ < target_sum:
+            first += 1
+        else:
+            last -= 1
+    return None
     pass
 
 def read_input() -> Tuple[List[int], int]:

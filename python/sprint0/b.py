@@ -2,7 +2,12 @@ from typing import List, Tuple
 
 def zipper(a: List[int], b: List[int]) -> List[int]:
     # Здесь реализация вашего решения
-    pass
+    ans = []
+    for i in range(len(a)):
+         ans.append(a[i])
+         ans.append(b[i])
+    return ans
+    # return [(b[i // 2] if i % 2 else a[i // 2]) for i in range(2 * len(a))]
 
 def read_input() -> Tuple[List[int], List[int]]:
     n = int(input())

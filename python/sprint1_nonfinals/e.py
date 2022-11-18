@@ -1,6 +1,10 @@
 def get_longest_word(line: str) -> str:
-    # Здесь реализация вашего решения
-    pass
+    wordList = line.split(" ")
+    word = wordList[0]
+    for i in range(1, len(wordList)):
+        if len(wordList[i]) > len(word):
+            word = wordList[i]
+    return word
 
 def read_input() -> str:
     _ = input()
