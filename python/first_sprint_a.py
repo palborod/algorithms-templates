@@ -1,4 +1,4 @@
-#ID 75136741
+#ID 75292796
 
 from typing import List
 
@@ -26,5 +26,6 @@ def read_input() -> List[int]:
     return house_num
 
 
-house_num = read_input()
-print(" ".join(map(str, result(house_num))))
+if __name__ == '__main__':
+    house_num = read_input()
+    print(*result(house_num))
